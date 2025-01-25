@@ -12,15 +12,12 @@ const MainSection = styled.main`
 `;
 
 export const RootComponent = () => {
-
   return (
-    <div className='relative flex flex-col h-screen'>
+    <div>
       <HeaderComponent />
-      <div className="flex relative w-full h-full pl-12 pt-12">
         <MainSection className="relative !w-full h-full">
           <HomeComponent />
         </MainSection>
-      </div>
     </div>
   )
 }
