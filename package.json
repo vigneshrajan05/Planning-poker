@@ -11,9 +11,12 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@carbon/colors": "^11.28.0",
+    "@carbon/styles": "^1.73.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "socket.io-client": "^4.7.4"
+    "socket.io-client": "^4.7.4",
+    "tailwind": "^4.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -49,7 +52,11 @@
         "jsx": true
       }
     },
-    "plugins": ["react", "react-hooks", "@typescript-eslint"],
+    "plugins": [
+      "react",
+      "react-hooks",
+      "@typescript-eslint"
+    ],
     "settings": {
       "react": {
         "version": "detect"
@@ -57,7 +64,12 @@
     },
     "rules": {
       "react/prop-types": "off",
-      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ],
       "react/react-in-jsx-scope": "off"
     }
   },
