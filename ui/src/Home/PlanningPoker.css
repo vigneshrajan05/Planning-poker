@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .flex-grow {
+    flex-grow: 1; /* Pushes the card-grid to the bottom */
+  }
+  
+  .card-grid-container {
+    height: 100px; /* Adjust height as needed */
+    background-color: #f7f7f7; /* Optional: background color for the bottom area */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .card-grid {
+    display: flex;
+    gap: 16px; /* Space between cards */
+  }
+  
+  .card {
+    width: 80px;
+    height: 120px;
+    background-color: #d3d3d3;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+    transform: translateY(-10px);
+  }
+  
