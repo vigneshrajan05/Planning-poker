@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A Planning Poker application built with React, TypeScript, and WebSockets.",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "dev": "vite",
+    "start": "cd ui && vite",
+    "build": "cd ui && vite build",
+    "dev": "cd ui && vite",
     "test": "vitest",
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write ."
