@@ -1,5 +1,7 @@
+import { RootComponent } from "./_base/main/RootComponent"
+
 export const App = () => {
   return (
-    <div>Planning Poker</div>
+    <RootComponent />
   )
 }
