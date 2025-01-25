@@ -1,4 +1,5 @@
 import { Theme, Header } from "@carbon/react"
+import { Presentation } from "@carbon/pictograms-react";
 
 export const HeaderComponent = () => {
   return (
@@ -7,7 +8,8 @@ export const HeaderComponent = () => {
             aria-label="Planning Poker"
             className={`pl-6`}
         >
-            PLANNING POKER
+            <Presentation style={{maxHeight: '42px'}} />
+            <span>PLANNING POKER</span>
         </Header>
     </Theme>
   )
