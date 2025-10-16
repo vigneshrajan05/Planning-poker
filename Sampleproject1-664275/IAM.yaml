@@ -1,0 +1,20 @@
+#
+# Copyright Super iPaaS Integration LLC, an IBM Company 2024
+#
+kind: IdentifyAndAuthorize
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: My_IAM
+  version: alpha
+  namespace: dev_iam
+  tags:
+    - IAM
+spec:
+  enabled: true
+  triggerPolicyViolation: true
+  identificationType:
+    or:
+      apiKey:
+        applicationLookup: 'registered'
+      httpBasicAuth:
+        applicationLookup: 'registered'

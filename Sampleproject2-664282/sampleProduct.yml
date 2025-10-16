@@ -1,0 +1,13 @@
+kind: Product
+apiVersion: api.ibm.com/v1
+metadata:
+  name: sampleProduct
+  namespace: WebmPublish
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  apis:
+    - $ref: WebmPublish:sampleAPI:1.0
+  plans:
+    - $ref: WebmPublish:samplePlan:1.0

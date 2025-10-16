@@ -1,0 +1,20 @@
+kind: Invoke
+apiVersion: api.ibm.com/v1
+metadata:
+  name: SampleInvoke
+  namespace: WebmPublish
+  version: "1.0"
+  tags: []
+  labels:
+    gatewayTypes:
+      - webMethods
+spec:
+  endpoint:
+    http:
+      target:
+        timeout: 30
+        url: /api/v3
+      verb: GET
+  extensions:
+    webm-gateway:
+      apiVersion: api.ibm.com/v1

@@ -1,0 +1,49 @@
+#
+# Copyright Super iPaaS Integration LLC, an IBM Company 2024
+#
+kind: test
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Sanity
+  version: alpha
+  tags:
+    - functional
+  namespace: dev_iam
+spec:
+  api:
+    $ref: dev_iam:API_IAM_IBM_VCS:alpha
+  environment:
+    $ref: dev_iam:env:alpha
+  request:
+    - method: GET
+      resource: /pet/1
+      headers:
+        - key: Content-Type
+          value: ${content-type}
+        - key: Accept
+          value: ${accept}
+      auth:
+        noauth: true
+      settings:
+        sslVerification: false
+        encodeURL: true
+      assertions:
+        $ref: iam_host_ip:basicassert:alpha
+    - method: GET
+      resource: /pet/{petid}
+      headers:
+        - key: Content-Type
+          value: ${content-type}
+        - key: Accept
+          value: ${accept}
+      auth:
+        noauth: true
+      settings:
+        sslVerification: false
+        encodeURL: true
+      assertions:
+        expressions:
+          - name: "Validate the response code"
+            key: "code"
+            value: 404
+            action: "equals"

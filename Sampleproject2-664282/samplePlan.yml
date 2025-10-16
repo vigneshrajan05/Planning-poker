@@ -1,0 +1,22 @@
+kind: Plan
+apiVersion: api.ibm.com/v1
+metadata:
+  name: samplePlan
+  namespace: WebmPublish
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  qos:
+    withQuota:
+      - $ref: WebmPublish:Quota-8rz5e5:1.0
+    withRateLimit:
+      - name: RateLimit1
+        maxRequest: 100
+        interval: 60m
+        alertMessage: alerted
+        alertConfiguration: once
+  pricing:
+    value: 100
+    currency: INR
+  isApprovalRequired: true

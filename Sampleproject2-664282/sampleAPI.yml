@@ -1,0 +1,15 @@
+kind: API
+apiVersion: api.ibm.com/v1
+metadata:
+  name: sampleAPI
+  namespace: WebmPublish
+  version: '1.0'
+  tags: []
+  type: REST
+spec:
+  api-spec:
+    $path: ./sampleAPI-spec.yml
+  policy-sequence:
+    - $ref: WebmPublish:SampleStagedPolSeq:1.0
+  uriSchemes:
+    $ref: WebmPublish:UriScheme:1.0

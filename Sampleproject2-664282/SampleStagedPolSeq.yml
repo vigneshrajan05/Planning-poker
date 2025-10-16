@@ -1,0 +1,13 @@
+kind: StagedPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: SampleStagedPolSeq
+  namespace: WebmPublish
+  version: '1.0'
+  tags: []
+  labels:
+    gatewayTypes:
+      - webMethods
+spec:
+  routing:
+    - $ref: WebmPublish:SampleInvoke:1.0

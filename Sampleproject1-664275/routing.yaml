@@ -1,0 +1,17 @@
+#
+# Copyright Super iPaaS Integration LLC, an IBM Company 2024
+#
+kind: Route
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: routing
+  version: alpha
+  namespace: dev_iam
+  tags:
+    - routing
+    - route
+    - policy
+    - IAM
+spec:
+  default-endpoint:
+    $ref: dev_iam:endpoint:alpha

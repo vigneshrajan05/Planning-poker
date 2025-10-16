@@ -1,0 +1,20 @@
+#
+# Copyright Super iPaaS Integration LLC, an IBM Company 2024
+#
+kind: api
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: API_IAM_IBM_VCS
+  namespace: dev_iam
+  version: alpha
+  tags:
+    - one
+    - two
+    - three
+    - IAM
+  type: REST
+spec:
+  api-spec:
+    $path: petstore.yaml
+  policy-sequence:
+    - $ref: dev_iam:policyseq:alpha

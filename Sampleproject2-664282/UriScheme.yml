@@ -1,0 +1,12 @@
+kind: URISchemes
+apiVersion: api.ibm.com/v1
+metadata:
+  name: UriScheme
+  namespace: WebmPublish
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  uriSchemes:
+    - http
+    - https

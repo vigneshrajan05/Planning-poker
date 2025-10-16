@@ -1,0 +1,20 @@
+kind: Quota
+apiVersion: api.ibm.com/v1
+metadata:
+  name: Quota-8rz5e5
+  namespace: WebmPublish
+  version: '1.0'
+  tags: []
+  description: ''
+spec:
+  maxRequest: 1000
+  interval: 60m
+  x-webm-config:
+    alertConfiguration:
+      message: alerted
+      frequency: once
+    notification:
+      enabled: true
+      notifyAfter: '50'
+      message: notified
+  onLimitReach: block
